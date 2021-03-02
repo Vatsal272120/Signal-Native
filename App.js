@@ -9,7 +9,7 @@ import Login from "./Screens/Login";
 
 const Stack = createStackNavigator();
 
-const globalScreen = {
+const globalScreenStyles = {
   headerStyle: { backgroundColor: "#2C68ED" },
   headerTitleStyle: { color: "white" },
   headerTintColor: "white",
@@ -18,14 +18,9 @@ const globalScreen = {
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={globalScreen}>
+      <Stack.Navigator screenOptions={globalScreenStyles}>
         <Stack.Screen name='Login' component={Login} />
       </Stack.Navigator>
-
-      <View style={styles.container}>
-        <Text>Signal</Text>
-        <StatusBar style='auto' />
-      </View>
     </NavigationContainer>
   );
 }
